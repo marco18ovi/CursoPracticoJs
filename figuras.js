@@ -67,7 +67,9 @@ function areaCirculo(radio){
 }
 // console.log("el area del circulo es "+areaCirculo)
 console.groupEnd()
-
+function alturaTriangulo(lado,base){
+    return x=Math.sqrt((Math.pow(lado,2))-(Math.pow((base/2),2)));
+}
 
 
 
@@ -115,4 +117,12 @@ function calcularCircunferenciaCirculo(){
     const value=radio.value;
     const circunferencia=circuenferenciaCirculo(value);
     alert(circunferencia);
+}
+function calcularAlturaTriangulo(){
+    const lado=document.getElementById("ladoTriangulo");
+    const valueLado=lado.value;
+    const base=document.getElementById("baseTriangulo");
+    const valueBase=base.value;
+    const alturaTria=alturaTriangulo(valueLado,valueBase)
+    alert(alturaTria)
 }
